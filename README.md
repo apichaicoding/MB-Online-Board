@@ -12,7 +12,7 @@ A Minecraft Bedrock Behavior Pack that displays an online player board using Scr
 
 ## Requirements
 
-- Minecraft Bedrock 1.21.90+
+- Minecraft Bedrock 1.26.30
 - Experimental APIs enabled
 
 ## Installation
