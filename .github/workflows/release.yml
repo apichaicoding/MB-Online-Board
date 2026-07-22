@@ -1,0 +1,27 @@
+name: Build Minecraft BP
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create mcpack
+        run: |
+          cd BP
+          zip -r "../Online Board BP.mcpack" .
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: Online Board BP.mcpack
